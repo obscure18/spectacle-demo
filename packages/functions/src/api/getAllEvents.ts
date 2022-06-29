@@ -1,4 +1,4 @@
-import { db } from '../util/firebase-admin'
+import { db } from '../utils/firebase-admin'
 import { SpectacleEvent } from '@spectacle/domain'
 import { Request, Response } from 'express'
 

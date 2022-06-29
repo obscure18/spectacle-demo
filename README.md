@@ -2,56 +2,62 @@
 
 _Made by Nadia Chicoine_
 
+## Demo
+See the deployed project at https://spectacle-demo-app.web.app/
+
 ## Description
 
 ### Features
 
-#### Event listing
+- List events
+- Create events
 
-- [ ] Add gif showing the functionality
-
-#### Event creation:
-
-- [ ] Add gif showing the functionality
-
-## TODO
-#### Must be done
-- [ ] Add unit testing setups
-- [x] Single Event Card
-- [x] List events
-  - [x] Error handling message
-- [ ] Create Event
-  - [x] Fix navigation between pages
-  - [ ] Frontend Unit tests
-  - [x] Set the event's time too
-
-#### Someday
+### TODO
 - [ ] Environment configurations
 - [ ] Add logging setup
-- [ ] Add analytics
+- [ ] Add more firebase tools (analytics, remote config, performance, etc.)
 - [ ] Automate with CI/CD
-- [x] Cleanup transpiling options
 - [ ] Improve chunks for dist in view
 - [ ] Skeleton - loading state
 - [ ] Paginate and filter event list query
 - [ ] Authentication
 - [ ] Security rules in Firebase based on Auth
 - [ ] Eslint
-- [ ] Codecov setup
+- [ ] Codecov
 - [ ] Improve tests setup
   - [ ] Cypress e2e tests with Playwright (responsiveness)
   - [ ] Automated API calls (system tests)
   - [ ] Cron jobs to cleanup the dev database
   - [ ] Add architecture testing for dependency safety TSArch
   - [ ] Setup Jest centrally with projects - advanced reporting
-- [ ] Feature flags (in Firebase it's called Remote Configurations)
 - [ ] Add translations and localization (for datetime picker and location selector)
+
+ ... and so much more
 
 ### File structure
 This is a monorepo, here's the general folder structure:
 
 ```json
-{ "show folder structure": "TODO" }
+packages
+├── domain
+│   └── src
+│       ├── factories
+│       ├── models
+│       └── validation
+├── functions
+│   ├── src
+│   │   ├── api
+│   │   └── utils
+│   └── typings
+├── view
+│   └── src
+│       ├── api
+│       ├── common
+│       ├── pages
+│       ├── providers
+│       └── utils
+└── view-core
+    └── src
 ```
 
 ## How Tos
@@ -67,14 +73,15 @@ firebase login
 
 ### Run in dev
 
-```shell
-npm install
-npm run dev
-```
-
 ### Run script only in specific package
 ```shell
 npm run dev -w @spectacle/view
+```
+
+```shell
+npm install
+npm run compile -w @spectacle/domain
+npm run dev
 ```
 
 ### Deploy

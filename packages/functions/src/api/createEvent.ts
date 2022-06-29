@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { db } from '../util/firebase-admin'
+import { db } from '../utils/firebase-admin'
 import { firestore } from 'firebase-admin'
 import { runValidation, spectacleEventValidation } from '@spectacle/domain'
 
