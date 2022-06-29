@@ -10,6 +10,7 @@ See the deployed project at https://spectacle-demo-app.web.app/
 ### Features
 
 - List events
+  - Note : I forgot to display the location ! It was going to be with Google's [Reverse Geocoding](https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse) on Maps API.
 - Create events
 
 ### TODO
