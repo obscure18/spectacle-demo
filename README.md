@@ -37,7 +37,7 @@ See the deployed project at https://spectacle-demo-app.web.app/
 ### File structure
 This is a monorepo, here's the general folder structure:
 
-```json
+```
 packages
 ├── domain
 │   └── src
