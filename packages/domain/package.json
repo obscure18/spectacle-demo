@@ -1,0 +1,30 @@
+{
+  "name": "@spectacle/domain",
+  "author": "Nadia Chicoine",
+  "version": "1.0.0",
+  "main": "./dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "engines": {
+    "npm" : ">=8.0.0",
+    "node" : ">=16.0.0"
+  },
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js",
+    "default": "./dist/esm/index.js"
+  },
+  "private": true,
+  "scripts": {
+    "build:both": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
+    "compile": "npm run clean && npm run build:both",
+    "dev": "npm run clean && tsc-watch --onSuccess \"echo \"Watching\"\"",
+    "clean": "rm -rf dist/*",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "tsc-watch": "^5.0.3",
+    "jest": "~28.1.1",
+    "ts-jest": "~28.0.5",
+    "@types/jest": "~28.1.3"
+  }
+}

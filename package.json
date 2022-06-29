@@ -1,0 +1,27 @@
+{
+  "name": "spectacle",
+  "private": true,
+  "scripts": {
+    "compile": "lerna run compile --stream --sort",
+    "start": "lerna run start --stream",
+    "dev": "lerna run dev --stream --parallel",
+    "deploy": "npm run compile && lerna run deploy --stream",
+    "see-dependencies": "lerna ls --graph --all --long --toposort"
+  },
+  "engines": {
+    "node": "~16.14.2",
+    "npm": "~8.5.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@rxdi/firelink": "~0.8.0",
+    "firebase": "~9.8.3",
+    "lerna": "^5.1.2"
+  }
+}

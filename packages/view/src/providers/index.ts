@@ -1,0 +1,2 @@
+import './ReactQueryClient'
+import './MantineUIProvider'

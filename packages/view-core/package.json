@@ -1,0 +1,16 @@
+{
+  "name": "@spectacle/view-core",
+  "version": "1.0.0",
+  "description": "core functionalities that can be reused through different react apps.",
+  "main": "index.ts",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-error-boundary": "~3.1.4",
+    "react-router-dom": "~6.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.47",
+    "@types/react-dom": "^18.0.5"
+  }
+}

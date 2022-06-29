@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "dev": "spectacle-demo-app",
+    "default": "spectacle-demo-app"
+  },
+  "targets": {}
+}

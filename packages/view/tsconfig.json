@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "useDefineForClassFields": true,
+    "declaration": false,
+    "noEmit": true,
+    "typeRoots": [
+      "src/types.d.ts",
+      "node_modules/@types"
+    ],
+    "baseUrl": "."
+  },
+  "include": ["src"],
+  "exclude": ["**/*.test.ts", "node_modules", "dist"],
+}

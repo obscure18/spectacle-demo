@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "source": "packages/functions",
+    "runtime": "nodejs16",
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run predeploy:functions"
+    ]
+  },
+  "hosting": {
+    "public": "packages/view/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
